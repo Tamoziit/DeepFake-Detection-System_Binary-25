@@ -23,3 +23,12 @@ export interface User {
     password: string;
     uploads: Types.ObjectId[];
 }
+
+export interface UploadProps {
+    videoUrl: string;
+}
+
+export interface FeedbackProps {
+    feedback: "yes" | "no" | "don't know";
+    id: Types.ObjectId
+}
