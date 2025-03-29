@@ -9,7 +9,7 @@ import morgan from "morgan";
 
 import connectToMongoDB from "./db/connectToMongoDB";
 import adminRoutes from "./routes/admin.routes";
-//import authRoutes from "./routes/auth.routes";
+import authRoutes from "./routes/auth.routes";
 
 const PORT = process.env.PORT || 3000;
 
@@ -44,6 +44,7 @@ app.get('/api/v1', (req: Request, res: Response) => {
 });
 
 app.use("/api/v1/admin", adminRoutes);
+app.use("/api/v1/auth", authRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on Port: ${PORT}`);

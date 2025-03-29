@@ -21,5 +21,5 @@ export interface User {
     name: string;
     email: string;
     password: string;
-    chatStreams: Types.ObjectId[];
+    uploads: Types.ObjectId[];
 }
